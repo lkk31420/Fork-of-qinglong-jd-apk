@@ -15,7 +15,6 @@
 
 
 # 使用方式一、利用Github Action自动打包apk
-为了安全起见，请fork本项目就修改网址，应用id及密钥
 - fork 本项目 
 - 在青龙后台创建一个应用，赋予修改变量的权限。 依次点击【系统设置】【应用设置】【创建应用】 ，名称无所谓，权限选择 环境变量。 创建后得到Client ID，Client Secret
   ![img.png](ql-app.png)
@@ -25,12 +24,12 @@
 
 - 点击Actions菜单，点击左侧 【APK打包】，点击右侧【Run workflow】手动触发打包流程，等待构建流程完毕，约4分钟 。 
    ![img.png](docs/run.png)
-- 回到项目首页，在右侧Releases菜单下查看最新apk
+- 回到项目首页，在右侧Releases菜单下查看最新apk。 下载apk后，建议删除打包结果，每次需要的时候再打包。
    ![img.png](docs/release.png)
 
 # 使用方式二、自行编译
 1. 克隆 本项目
-2. 修改代码app/src/main/java/cn/moon/ql/Config.java中的青龙后台地址QL_URL, CLIENT_ID,CLIENT_SECRET。 (需在青龙脚本配置一个应用)
+2. 修改代码app/src/main/java/cn/moon/ql/Config.java中的青龙后台地址QL_URL, CLIENT_ID,CLIENT_SECRET。
 
 # 更新日志
 - 20240613 github action打包apk支持 Secret方式
